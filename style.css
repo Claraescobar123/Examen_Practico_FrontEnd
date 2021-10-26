@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap');
+
+:root {
+    --color-primary: #F3603B;
+    --color-secondary: #1CD1B0;
+    --color-terciary: #F3F3F3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.header {
+    height: 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header a {
+    text-decoration: none;
+    font-size: 20px;
+}
+.logo{
+    padding:2rem;
+
+}
+.checkbtn{
+    display:block;
+    position:absolute;
+    margin-left:80%;
+    padding:2rem;
+}
+#check{
+    display:none;
+}
+.nav-header ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    list-style: none;
+}
+
+.nav-header ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+
+li a:hover, li a.active {
+    background: none;
+    color: white;
+}
+
+#check:checked ~ ul {
+    left: 0;
+}
+
+.btn {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        height: 118px;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    .nav-header{
+        display: flex;
+        justify-content:space-between;
+        background-color:none;
+    }
+    
+    .nav-header ul{
+        display:block;
+        transition: none;
+        width:85%;
+        height:0px;
+        top: -25px;
+        left: 10%;
+    }
+    .nav-header ul li {
+        display: inline-block;
+        text-align: center;
+    }
+    .nav-header ul li a{
+        font-size:16px;
+        padding:0.5rem;
+    }
+    .checkbtn{
+        display:none;
+    }
+    .logo {
+        padding: 2rem;
+    }
+    li a:hover{
+        color: var(--color-primary);
+    }
+    .btn {
+        display: block;
+        background-color: var(--color-primary);
+        box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
+        color: white;
+        border-radius: 50px;
+        height: 45px;
+        width: 125px;
+        text-align: center;
+        padding: 0.5rem;
+        border: none;
+    }
+    .container-btn {
+        padding: 1rem;
+    }
+}
